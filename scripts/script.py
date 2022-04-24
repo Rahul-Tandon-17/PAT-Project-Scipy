@@ -5,7 +5,7 @@ import csv
 count = 0
 dir_name = os.path.dirname(os.path.realpath(__file__))
 
-output_file = open('../output/output.csv', "a+")
+output_file = open('output.csv', "a+", newline='')
 writer = csv.writer(output_file)
 writer.writerow(['File', 'No of assertions'])
 
