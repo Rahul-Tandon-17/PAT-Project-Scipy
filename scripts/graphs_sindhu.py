@@ -1,9 +1,12 @@
 import matplotlib.pyplot as plt
 import csv
+import os
 
+cur_path = os.path.dirname(__file__)
+new_path = os.path.relpath('../output/part2_output.csv', cur_path)
 
 assertions_count = {}
-with open('C:/Users/sindh/College/PAT/PAT-Project-Scipy/output/part2_output.csv','r') as file:
+with open(new_path, 'r') as file:
     reader = csv.reader(file)
     for row in reader:
         if row[0] == 'File' or row[0].__contains__('Total'):
@@ -23,12 +26,13 @@ plt.ylabel('Test File')
 plt.show()
 
 #############################################################
+new_path = os.path.relpath('../output/coverage.csv', cur_path)
 
 coverage_count = {}
 
 plt.close()
 
-with open('C:/Users/sindh/College/PAT/PAT-Project-Scipy/output/coverage.csv', 'r') as file:
+with open(new_path, 'r') as file:
     reader = csv.reader(file)
     for row in reader:
         if row[0] == 'Module' or row[0].__contains__('Total')\
@@ -56,7 +60,7 @@ branch_count = {}
 
 plt.close()
 
-with open('C:/Users/sindh/College/PAT/PAT-Project-Scipy/output/coverage.csv', 'r') as file:
+with open(new_path, 'r') as file:
     reader = csv.reader(file)
     for row in reader:
         if row[0] == 'Module' or row[0].__contains__('Total')\
