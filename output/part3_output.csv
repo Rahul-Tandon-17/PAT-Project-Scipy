@@ -1,0 +1,43 @@
+File,Number of Assert Statements,Number of Debug Statements
+_matfuncs_inv_ssq.py,0,5
+_testutils.py,2,0
+_special_matrices.py,0,1
+_tstutils.py,0,1
+_dual_annealing.py,0,8
+tr_interior_point.py,0,1
+_quadrature.py,0,1
+_gcutils.py,3,0
+_spfun_stats.py,0,2
+_testutils.py,3,0
+_add_newdocs.py,0,9
+_mptestutils.py,4,0
+_lambertw.py,0,1
+_orthogonal.py,0,1
+_logsumexp.py,0,10
+wright_bessel.py,0,1
+gammainc_asy.py,0,2
+lambertw.py,0,1
+_rbfinterp_pythran.py,0,1
+_fftlog.py,0,1
+_basic.py,0,1
+distance.py,0,1
+_signaltools.py,0,2
+_filter_design.py,0,1
+_fir_filter_design.py,0,2
+_windows.py,0,1
+_multivariate.py,0,11
+_constants.py,0,1
+_stats_py.py,0,9
+_ksstats.py,0,6
+_mstats_basic.py,0,2
+_qmc.py,0,2
+_discrete_distns.py,0,1
+_kde.py,0,3
+_hypotests.py,0,3
+_distn_infrastructure.py,0,4
+_continuous_distns.py,0,185
+_morestats.py,0,5
+_entropy.py,0,7
+__init__.py,0,10
+Total number of Assertions: 12
+Total number of Debugs: 303

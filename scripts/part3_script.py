@@ -34,8 +34,9 @@ def getAsserts(path):
 
 
 if __name__ == "__main__":
-    count = 0
+    totalAsserts = 0
 
+    totalDebugs = 0
     # Getting the directory of the project
     root_dir_name = os.path.dirname(os.path.realpath(__file__))
 
@@ -58,9 +59,15 @@ if __name__ == "__main__":
             if file.split(".")[-1] == "py":
                 numberOfAsserts = getAsserts(os.path.join(root, file))
                 numberOfDebugs = getDebugs(os.path.join(root, file))
+                totalAsserts += numberOfAsserts
+                totalDebugs += numberOfDebugs
 
             if numberOfAsserts > 0 or numberOfDebugs > 0:
-                writer.writerow([os.path.join(root, file), str(numberOfAsserts), str(numberOfDebugs)])
+                writer.writerow([file, str(numberOfAsserts), str(numberOfDebugs)])
+
+    output_file.write('Total number of Assertions: ' + str(totalAsserts))
+    output_file.write('\nTotal number of Debugs: ' + str(totalDebugs))
+    output_file.close()
 
 
 
