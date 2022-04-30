@@ -4,8 +4,6 @@ import re
 from pydriller import Repository
 import csv
 
-# d1 = datetime(2016, 3, 19)
-# d2 = datetime(2022, 4, 21)
 modification_count = {}
 
 for commit in Repository('https://github.com/scipy/scipy.git').traverse_commits():
