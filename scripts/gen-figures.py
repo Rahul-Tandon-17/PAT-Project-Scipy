@@ -7,7 +7,7 @@ import random
 
 data_modification = {}
 
-with open('E:\PATproject\part4_full_file_path.csv','r') as file:
+with open('E:\PATproject\part4_output.csv','r') as file:
     reader = csv.reader(file)
     for row in reader:
         if row[0] == 'Test File Path':
@@ -28,7 +28,7 @@ plt.show()
 
 file_modification = {}
 
-with open('E:\PATproject\part4_full_file_path.csv','r') as file:
+with open('E:\PATproject\part4_output.csv','r') as file:
     reader = csv.reader(file)
     for row in reader:
         if row[0] == 'Test File Path':
