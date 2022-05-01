@@ -181,3 +181,54 @@ font = {'family': 'Arial',
 plt.title('Percentage distribution of code coverage', y = -0.1, fontdict=font)
 plt.pie(coverage_count.values(), labels=coverage_count.keys(), autopct='%1.0f%%', pctdistance=0.7, labeldistance=1.08, textprops=font)
 plt.show()
+
+###########################################################
+# Part 3 Figures
+
+data = {}
+
+
+with open('../output/part3_output.csv', 'r') as file:
+    reader = csv.reader(file)
+    for row in reader:
+        if row[0] == "File" or row[0].startswith("Total"):
+            continue
+        data[row[0]] = [int(row[1]), int(row[2])]
+
+file.close()
+
+# Files vs assertions
+files = []
+assertions = []
+print("DATA", data)
+# data = sorted(data, key=lambda x: x[])
+temp = sorted(data, key=lambda x: x[1][0])
+print("SORTED", temp)
+for keys, values in data.items():
+    if int(values[0]) != 0:
+        files.append(keys)
+        assertions.append(values[0])
+
+plt.barh(files, assertions)
+plt.title('Files vs Assertions')
+plt.xlabel('File Name')
+plt.ylabel('Number of Assertions')
+plt.ylim(bottom=0)
+plt.show()
+
+
+files = []
+debug = []
+for keys, values in data.items():
+    if int(values[1]) != 0:
+        files.append(keys)
+        debug.append(values[1])
+
+
+plt.barh(files, debug)
+plt.title('Files vs Debugs')
+plt.xlabel('File Name')
+plt.ylabel('Number of Debugs')
+plt.ylim(bottom=0)
+plt.show()
+
