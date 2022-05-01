@@ -200,10 +200,6 @@ file.close()
 # Files vs assertions
 files = []
 assertions = []
-print("DATA", data)
-# data = sorted(data, key=lambda x: x[])
-temp = sorted(data, key=lambda x: x[1][0])
-print("SORTED", temp)
 for keys, values in data.items():
     if int(values[0]) != 0:
         files.append(keys)
