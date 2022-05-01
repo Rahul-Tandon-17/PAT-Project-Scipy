@@ -202,7 +202,7 @@ files = []
 assertions = []
 for keys, values in data.items():
     if int(values[0]) != 0:
-        files.append(keys)
+        files.append(keys.split("/")[-1])
         assertions.append(values[0])
 
 plt.barh(files, assertions)
@@ -217,7 +217,7 @@ files = []
 debug = []
 for keys, values in data.items():
     if int(values[1]) != 0:
-        files.append(keys)
+        files.append(keys.split("/")[-1])
         debug.append(values[1])
 
 
